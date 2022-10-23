@@ -40,6 +40,22 @@ declare(strict_types=1);
 \$cfg['TempDir'] = '/tmp';
 EOM
 
+
+sudo tee /etc/apache2/sites-available/000-default.conf << EOM
+<VirtualHost *:80>
+    ServerName "localhost"
+    DocumentRoot "/var/www/html"
+    <Directory "/var/www/html">
+        Options Indexes FollowSymLinks Includes
+        AllowOverride All
+        Require all granted
+    </Directory>
+    ErrorLog \${APACHE_LOG_DIR}/error.log
+    CustomLog \${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+EOM
+
+
 sudo tee /etc/apache2/sites-available/phpmyadmin.conf << EOM
 <IfModule alias_module>
     Alias /phpmyadmin "/var/www/phpmyadmin"
