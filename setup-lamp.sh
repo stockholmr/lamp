@@ -36,7 +36,7 @@ sudo add-apt-repository ppa:ondrej/apache2 -y
 # Install packages
 ##
 sudo apt update
-sudo apt install apache2 wget curl unzip mariadb-server libapache2-mod-php8.3 php-xdebug php8.3 php8.3-cli php8.3-{bz2,mysql,mbstring,xml,zip,gd,imagick,intl,curl,sqlite3} -y
+sudo apt install apache2 wget curl unzip mariadb-server libapache2-mod-php8.3 php-xdebug php8.3 php8.3-cli php8.3-{bz2,mysql,mbstring,xml,zip,gd,imagick,intl,curl,sqlite3,xdebug} -y
 
 # Reference
 # C = GB

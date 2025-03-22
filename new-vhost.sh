@@ -47,3 +47,4 @@ sudo tee /etc/apache2/sites-available/$wwwName.conf << EOM
 EOM
 
 sudo a2ensite $wwwName
+sudo systemctl restart apache2
