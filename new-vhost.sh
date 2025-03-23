@@ -25,7 +25,7 @@ sudo tee /etc/apache2/sites-available/$wwwName.conf << EOM
 <VirtualHost *:80>
     ServerName "$domain"
     DocumentRoot "/var/www/$wwwName/public"
-    <Directory "/var/www/html/public">
+    <Directory "/var/www/$wwwName/public">
         Options Indexes FollowSymLinks Includes
         AllowOverride All
         Require all granted
@@ -35,7 +35,7 @@ sudo tee /etc/apache2/sites-available/$wwwName.conf << EOM
 <VirtualHost *:443>
     ServerName "$domain"
     DocumentRoot "/var/www/$wwwName/public"
-    <Directory "/var/www/html/public">
+    <Directory "/var/www/$wwwName/public">
         Options Indexes FollowSymLinks Includes
         AllowOverride All
         Require all granted
